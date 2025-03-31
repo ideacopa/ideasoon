@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<title>Registration Form in HTML CSS</title>-->
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header><br>
+        <img src="./assets/img/LOGO1.png" alt="" width="260px" height="115px" > <br>
+        <h2>Tech Word Hunt Phase 2</h2>
+        <h6>Capture The ScreenShot Of CrossWord Puzzle After Completion</h6>
+      </header>
+      <form action="https://sheetdb.io/api/v1/qckjwgd932qjh" method="post" id="sheetdb-form" class="form">
+        <div class="input-box">
+          <label>Full Name</label>
+          <input name="data[name]" type="text" placeholder="Enter full name" required />
+        </div>
+        <div class="input-box">
+          <label>Email Address</label>
+          <input name="data[email]" type="text" placeholder="Enter email address" required />
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Phone Number</label>
+            <input name="data[phone]" type="number" placeholder="Enter phone number" required />
+          </div>
+        </div>
+        <div class="input-box address">
+          <label>Semster and Department</label>
+          <input name="data[semster]" type="text" placeholder="Enter Semster & Department" required />
+        </div>
+        <br>
+        <br>
+        <div class="interacty_padding" style="position: relative; padding: 99.5% 0 0 0;">
+          <div class="interacty_wrapper" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center;">
+              <iframe style="border: none; width: 100%; height: 125%;" src="https://p.interacty.me/14b98b6e15dfc3d9/iframe.html"></iframe>
+          </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br><br>
+      <br>
+        <button type="submit" >Submit</button>
+      </form>
+      <br>
+      <br>
+      <h7><i>This Form Is Created Using !deacopa Services <br>
+      all rights are reserved &copy</i></h7>
+    </section>
+
+    <script>
+      var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      // you can put any JS code here
+      window.open('page2.html', '_blank');
+
+    });
+  });
+  </script>
+
+  </body>
+</html>
